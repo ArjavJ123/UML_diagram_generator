@@ -163,6 +163,7 @@ Remember:
 - Occurrence starts at [1] for first match
 - Keep changes minimal and targeted
 - Maintain code formatting and style
+- Validate that the final code is syntactically correct PlantUML if you perform operation at a given location, ensure that the block you are adding is valid in that context (e.g., don't add a relationship inside a class definition)
 """
         
         return prompt
