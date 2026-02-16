@@ -39,7 +39,7 @@ Database (JSON files)
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/ArjavJ123/UML_diagram_generator.git
 ```
 
 ### 2. Backend Setup

@@ -1,0 +1,226 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background-color: #0b0f19;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: white;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2f45;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.chat-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 260px;
+  background: #111827;
+  border-right: 1px solid #2a2f45;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.sidebar button:hover {
+  background: #1d4ed8;
+}
+
+.sidebar > div {
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #1a1f2e;
+  transition: background 0.2s;
+}
+
+.sidebar > div:hover {
+  background: #2a2f45;
+}
+
+.sidebar > div.active-thread {
+  background: #2563eb;
+  font-weight: 600;
+}
+
+/* ===== MAIN CHAT AREA ===== */
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ===== CHAT WINDOW ===== */
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* ===== INPUT BAR ===== */
+.input-bar {
+  display: flex;
+  gap: 10px;
+  padding: 16px;
+  border-top: 1px solid #2a2f45;
+  background: #0b0f19;
+  align-items: center;
+}
+
+.input-box {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #2a2f45;
+  background: #1a1f2e;
+  color: white;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.input-box::placeholder {
+  color: #6b7280;
+}
+
+/* ===== CUSTOM DROPDOWN ===== */
+.dropdown-container {
+  position: relative;
+  min-width: 180px;
+}
+
+.dropdown-trigger {
+  width: 100%;
+  padding: 10px 12px;
+  background: #1a1f2e;
+  border: 1px solid #2a2f45;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.dropdown-trigger:hover {
+  background: #2a2f45;
+}
+
+.arrow {
+  margin-left: 8px;
+  font-size: 10px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+  background: #1a1f2e;
+  border: 1px solid #2a2f45;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  z-index: 1000;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background: #2a2f45;
+}
+
+.dropdown-item input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: #2563eb;
+}
+
+/* ===== FILE UPLOAD ===== */
+.file-upload-btn {
+  padding: 10px 16px;
+  background: #1a1f2e;
+  border: 1px solid #2a2f45;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.file-upload-btn:hover:not(:disabled) {
+  background: #2a2f45;
+}
+
+.file-upload-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== SEND BUTTON ===== */
+.send-btn {
+  padding: 10px 24px;
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.send-btn:hover {
+  background: #1d4ed8;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

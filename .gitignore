@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Environment variables
+.env
+.env.local
+
+# Database files (generated at runtime)
+database/
+data/
+
+# Logs
+*.log
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# PlantUML temp
+tmp/
+temp/
+
+# Test
+.pytest_cache/
+.coverage
+htmlcov/
+*.ipynb_checkpoints/
+
+# Jupyter
+test.ipynb
+*.ipynb
